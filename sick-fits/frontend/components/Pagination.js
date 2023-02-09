@@ -22,7 +22,9 @@ export const Pagination = ({ page }) => {
   return (
     <PaginationStyles>
       <Head>
-        <title>Sick fits page {page} of ___</title>
+        <title>
+          Sick fits page {page} of {pageTotal}
+        </title>
       </Head>
       <Link href={`/products/${page - 1}`}>
         <a aria-disabled={page <= 1}>Prev</a>

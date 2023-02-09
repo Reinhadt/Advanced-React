@@ -4,12 +4,13 @@ import Pagination from '../../components/Pagination';
 
 const ProductsPage = () => {
   const { query } = useRouter();
-  const page = parseInt(query.page);
+  const page = query?.page ? parseInt(query.page) : undefined;
+  console.log('page', page);
   return (
     <div>
       <Pagination page={page || 1} />
       <Products page={page || 1} />
-      <Pagination page={page} />
+      <Pagination page={page || 1} />
     </div>
   );
 };

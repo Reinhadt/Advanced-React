@@ -5,15 +5,18 @@ import Page from '../components/Page';
 // import 'nprogress/nprogress.css';
 import '../components/styles/nprogress.css';
 import withData from '../lib/withData';
+import { CarStateProvider } from '../lib/carState';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 
 export const MyApp = ({ Component, pageProps, apollo }) => (
   <ApolloProvider client={apollo}>
-    <Page>
-      <Component {...pageProps} />
-    </Page>
+    <CarStateProvider>
+      <Page>
+        <Component {...pageProps} />
+      </Page>
+    </CarStateProvider>
   </ApolloProvider>
 );
 

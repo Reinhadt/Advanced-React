@@ -48,9 +48,9 @@ export const SingleProduct = ({ id }) => {
     Product: { name, description, price, photo },
   } = data;
   return (
-    <ProductStyles>
+    <ProductStyles data-testid="singleProduct">
       <img src={photo.image.publicUrlTransformed} alt={photo.altText} />
-      <div className="Details">
+      <div className="details">
         <h2>{name}</h2>
         <p>{description}</p>
       </div>
@@ -58,4 +58,5 @@ export const SingleProduct = ({ id }) => {
   );
 };
 
+export { SINGLE_ITEM_QUERY };
 export default SingleProduct;
