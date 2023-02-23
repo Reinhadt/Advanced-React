@@ -73,7 +73,7 @@ describe('<Nav />', () => {
       </CarStateProvider>
     );
     await screen.findByText('Account');
-    debug();
+    // debug();
     expect(screen.getByText('3')).toBeInTheDocument();
   });
 });

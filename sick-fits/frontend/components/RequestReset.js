@@ -57,4 +57,6 @@ const RequestReset = () => {
   );
 };
 
+export { REQUEST_RESET_MUTATION };
+
 export default RequestReset;

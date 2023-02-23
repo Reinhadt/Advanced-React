@@ -20,7 +20,7 @@ export const Pagination = ({ page }) => {
   if (error) return <DisplayError error={error} />;
   const pageTotal = Math.ceil(data._allProductsMeta.count / perPage);
   return (
-    <PaginationStyles>
+    <PaginationStyles data-testid="pagination">
       <Head>
         <title>
           Sick fits page {page} of {pageTotal}

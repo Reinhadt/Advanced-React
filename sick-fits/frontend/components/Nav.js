@@ -8,7 +8,7 @@ import CartCount from './CartCount';
 export const Nav = () => {
   const user = useUser();
   const { openCart } = useCart();
-  console.log(user);
+  // console.log(user);
   return (
     <NavStyles>
       <Link href="/products">Products</Link>

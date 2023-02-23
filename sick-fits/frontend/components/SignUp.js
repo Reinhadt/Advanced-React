@@ -34,7 +34,6 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // send email and password
-    console.log(data);
     await signup().catch(console.error(error));
     resetForm();
   };
@@ -80,10 +79,13 @@ const SignUp = () => {
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Sign In</button>
+        <button data-testid="signupbutton" type="submit">
+          Sign Up
+        </button>
       </fieldset>
     </Form>
   );
 };
 
+export { SIGN_UP_MUTATION };
 export default SignUp;

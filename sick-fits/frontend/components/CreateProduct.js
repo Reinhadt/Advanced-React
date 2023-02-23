@@ -38,9 +38,9 @@ const CREATE_PRODUCT_MUTATION = gql`
 export const CreateProduct = () => {
   const { inputs, handleChange, clearForm, resetForm } = useForm({
     image: '',
-    name: 'Nice shoes',
-    price: 12345,
-    description: 'Best shoes in town',
+    name: '',
+    price: '',
+    description: '',
   });
 
   const [createProduct, { loading, error, data }] = useMutation(
@@ -95,7 +95,7 @@ export const CreateProduct = () => {
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="name">
+        <label htmlFor="description">
           Description
           <input
             type="textarea"
@@ -112,10 +112,11 @@ export const CreateProduct = () => {
         <button type="button" onClick={resetForm}>
           Reset
         </button>
-        <button type="submit">+ AddProduct</button>
+        <button type="submit">+ Add Product</button>
       </fieldset>
     </Form>
   );
 };
 
+export { CREATE_PRODUCT_MUTATION };
 export default CreateProduct;
